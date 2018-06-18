@@ -1,0 +1,65 @@
+
+
+a = ['wordl', 'word', 'ford']
+
+def rrr():
+    for f in a:
+        yield f
+
+aa = rrr()
+
+for i in aa:
+    print(i)
+
+
+
+import numpy as np
+
+# arr = np.array(([x for x in range(9)], [x for x in range(9,18)]),dtype=int)
+arr = np.array([(1,1,1,1,1,0,1), (1,1,1,0,1,1,1)],dtype=int)
+print(arr)
+
+for i in arr:
+    if sum(i) != len(i):
+        pos = 0
+        for k in i:
+            if k != 1:
+                print('found  in pos {}'.format(pos),k )
+            pos += 1
+
+
+from random import randint
+strok = 50
+stolb = 30
+arr = []
+for i in range(strok):
+    row = []
+    for j in range(stolb):
+        row.append(1)
+    print('%s / ' %sum(row), row)
+    arr.append(row)
+# print(arr)
+
+for i in arr:
+    # print('%3d '%sum(i), end='')
+    r = randint(0,len(i)-1)
+    i[r]= 0
+for i in arr:
+    print(i)
+
+f = [1,2,3,4,5,6]
+print(f)
+f[1] = 100
+print(f)
+
+
+for i in range(10):
+    if i==0 or i==9:
+        for j in range(20):
+            print('w',end='')
+    else:
+        print('w',end='')
+        for j in range(1,19):
+            print('l',end='')
+        print('w',end='')
+    print()
